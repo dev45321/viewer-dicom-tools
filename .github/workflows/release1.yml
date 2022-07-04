@@ -43,7 +43,7 @@ jobs:
           cd mvn-repo
           REPO=$(pwd)
           PKGFOLDER="org/weasis/weasis-dicom-tools"
-          TAG_VERSION=${{ steps.project.outputs.version }}
+          TAG_VERSION= "5.25.1"
           F_META="maven-metadata.xml"
           cd ~/.m2/repository/${PKGFOLDER}
           find . -name "*.jar" -o -name "*.pom" | cpio -updm ${REPO}/${PKGFOLDER}
